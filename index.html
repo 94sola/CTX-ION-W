@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CTX-IOn Web</title>
+  <link rel="stylesheet" href="style/style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+
+<body class="text-black relative">
+  <div class="container h-screen bg-white">
+
+    <nav class="flex items-center bg-white h-24 ">
+
+      <img src="/image/logo.png" class="px-9 w-48 cursor-pointer">
+
+      <ul class="sm:flex items-center gap-x-[32px] text-sm font-semibold leading-5 hidden">
+        <li class="list-none"><a href="#"
+            class="no-underline ">About</a></li>
+        <li class="list-none "><a href="#"
+            class="no-underline">What We Do</a></li>
+        <li class="list-none"><a href="#"
+            class="no -und">Our Services</a></li>
+      </ul>
+
+      <ul id="mobile" class=" absolute top-[95px] left-0 list-none text-sm font-semibold leading-5 hidden sm:hidden gap-y-2">
+        <li class=""><a href="#"
+            class=" ">About</a></li>
+        <li class=""><a href="#"
+            class="">What We Do</a></li>
+        <li class=""><a href="#"
+            class="">Our Services</a></li>
+      </ul>
+
+      <button id="close" class ="text-3xl cursor-pointer hidden sm:hidden" onclick="menu(this)">
+        <ion-icon name="close"></ion-icon>
+      </button>
+
+      <button id="open" class="text-3xl cursor-pointer flex sm:hidden " onclick="menu(this)">
+        <ion-icon name="menu"></ion-icon>
+      </button>
+
+
+      <p class="par px-2 py-2 mr-6 leading-5 md:items-left last:hover:bg-transparent duration-200"><a href="#"
+       class="text-sm text-white cursor-pointer  px-3 py-2 font-bold">Contact Us</a></p>
+    </nav>
+
+
+    <div class="text-center w-full object-center py-20 px-28 sm:w-full md:w-full">
+      <div class="">
+        <h1 class=" text-center text-6xl font-bold  py-4">Precision, Accuracy, Discovery</h1>
+        <div class="px-4">
+          <p class="pr font-normal leading-6 h-24 mx-9 py-3 mb-5 text-gl align-middle w-full">Welcome to CTX-ION, where
+            precision meets excellence in every analysis.<br> We are a leading research focused laboratory dedicated to
+            providing <br> our customers quality data from every sample.</p>
+        </div>
+
+        <div class="pt-5 sm:px-2 md:px-2 sm:top-3 md:mt-5 mb-2">
+          <a href="index.html" class="btn w-40 h-12 px-5 py-2  mt-4 cursor-pointer">Learn more</a>
+        </div>
+      </div>
+
+      <div class="px-7 py-5 w-50%">
+        <img src="/image/hero section image.jpg" class="img  px-10 text-center  mt-6 pl-30 ">
+      </div>
+
+    </div>
+    <div class="about px-7 py-9 grid grid-cols-2 gap-10 sm:grid-cols-2  justify-center align-middle">
+      <div class="text-center px-4">
+        <h3 class=" font-bold text-4xl pb-8 pt-6">About Us</h3>
+
+          <h4 class="font-bold text-2xl  pb-2">Who We Are</h4>
+          <p class="pr text-sm  px-16 md:px-4 sm:px-2">CTX-ION Analytics is a privately owned provider of chemical testing services.
+            Established in 2015 and based in Ikeja, Lagos, we have built strong and trusted customer relationships
+            within our target domain.</p>
+       
+        
+          <h4 class="font-bold text-2xl pt-10">Our Core Values</h4>
+          <p class="pr text-sm px-16 md:px-4 sm:px-2">Quality and timeliness are the hallmarks of our operation. Our team members are committed to the same goals,
+          committed to producing excellent results and delivering value to the customer. Continuous improvement is our
+          watchword and we spare no efforts in staying at the cutting edge of analytical science.</p>
+      </div>
+
+      <div class=" ab-img  ">
+        <img src="/image/about frame.jpg" class="pt-6 pb-7">
+      </div>
+    </div>
+
+    <div class=" service h-4/5 w-full justify-center  text-white ">
+      <div class="pt-16 justify-center">
+        <h2 class="font-bold text-6xl mx-10 pl-16">What We Do</h2>
+        <div class="grid grid-cols-3 gap-9">
+          <div class=" px-8">
+            <h5>Research Support</h5>
+            <p class="">CTX-ION is primarily focused on bridging the educational gap in Nigerian academic institutions by providing industry standard analytical lab services to scientific researchers. </p>
+          </div>
+
+          <div class="ctx-do px-8 ">
+            <h5>Analytical Testing Services</h5>
+            <p>We also collaborate with other companies in offering analytical testing services in the aspects of regulatory product testing and environmental compliance monitoring</p>
+          </div class=" px-8">
+
+          <div>
+            <h5>Third Party Testing</h5>
+            <p>We also collaborate with other companies in offering analytical testing services in the aspects of regulatory product testing and environmental compliance monitoring.</p>
+          </div>
+
+        </div>
+    </div>
+  </div>
+  </div>
+
+  <script>
+    const list = document.getElementById('menu')
+    const openBtn = document.getElementById('open')
+    const closeBtn = document.getElementById('close')
+
+    openBtn.addEventListener("click", () => {
+      list.classList.remove('hidden')
+      list.classList.add('flex flex-col')
+      openBtn.classList.add('hidden')
+      closeBtn.classList.add('flex')
+    })
+
+    closeBtn.addEventListener("click", () => {
+      list.classList.add('hidden')
+      closeBtn.classList.add('hidden')
+    })
+  </script>
+</body>
+
+</html>
